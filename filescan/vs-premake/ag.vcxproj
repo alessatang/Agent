@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseKjk|Win32">
+      <Configuration>ReleaseKjk</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D05D932F-8C7F-1F44-BFDB-F5985243D8A9}</ProjectGuid>
+    <RootNamespace>ag</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\dbg\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj\Debug\ag\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ag</TargetName>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\rel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj\Release\ag\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ag</TargetName>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'">..\rel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'">obj\ReleaseKjk\ag\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'">ag</TargetName>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4800 /wd4127 /wd4100 /wd4244 /TP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\src;..\wincompat;..\wincompat\zlib;..\wincompat\pcre-8.32;..\wincompat\pthread-win32;..\doctotext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;_WIN32;WIN32;WINDOWS;_CRT_SECURE_NO_WARNINGS;PCRE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;_WIN32;WIN32;WINDOWS;_CRT_SECURE_NO_WARNINGS;PCRE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\wincompat;..\wincompat\zlib;..\wincompat\pcre-8.32;..\wincompat\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Shlwapi.lib;libdoctotext.a;..\dbg\zlib.lib;..\dbg\pthread-win32.lib;..\dbg\pcre.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)ag.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\doctotext;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDataBaseFileName>$(OutDir)ag.pdb</ProgramDataBaseFileName>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/NODEFAULTLIB:"msvcrt.lib" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4800 /wd4127 /wd4100 /wd4244 /TP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\src;..\wincompat;..\wincompat\zlib;..\wincompat\pcre-8.32;..\wincompat\pthread-win32;..\doctotext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WIN32;WIN32;WINDOWS;_CRT_SECURE_NO_WARNINGS;PCRE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_WIN32;WIN32;WINDOWS;_CRT_SECURE_NO_WARNINGS;PCRE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\wincompat;..\wincompat\zlib;..\wincompat\pcre-8.32;..\wincompat\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Shlwapi.lib;libdoctotext.a;..\rel\zlib.lib;..\rel\pthread-win32.lib;..\rel\pcre.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)ag.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\doctotext;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ProgramDataBaseFileName>$(OutDir)ag.pdb</ProgramDataBaseFileName>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/NODEFAULTLIB:"msvcrt.lib" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKjk|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4800 /wd4127 /wd4100 /wd4244 /TP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\src;..\wincompat;..\wincompat\zlib;..\wincompat\pcre-8.32;..\wincompat\pthread-win32;..\doctotext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;KJK_BUILD;_WIN32;WIN32;WINDOWS;_CRT_SECURE_NO_WARNINGS;PCRE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;KJK_BUILD;_WIN32;WIN32;WINDOWS;_CRT_SECURE_NO_WARNINGS;PCRE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\wincompat;..\wincompat\zlib;..\wincompat\pcre-8.32;..\wincompat\pthread-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Shlwapi.lib;libdoctotext.a;..\rel\zlib.lib;..\rel\pthread-win32.lib;..\rel\pcre.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)ag.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\doctotext;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ProgramDataBaseFileName>$(OutDir)ag.pdb</ProgramDataBaseFileName>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/NODEFAULTLIB:"msvcrt.lib" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\binarytotext.h" />
+    <ClInclude Include="..\src\decompress.h" />
+    <ClInclude Include="..\src\ignore.h" />
+    <ClInclude Include="..\src\lang.h" />
+    <ClInclude Include="..\src\log.h" />
+    <ClInclude Include="..\src\options.h" />
+    <ClInclude Include="..\src\print.h" />
+    <ClInclude Include="..\src\scandir.h" />
+    <ClInclude Include="..\src\search.h" />
+    <ClInclude Include="..\src\uthash.h" />
+    <ClInclude Include="..\src\util.h" />
+    <ClInclude Include="..\wincompat\dirent.h" />
+    <ClInclude Include="..\wincompat\getopt.h" />
+    <ClInclude Include="..\wincompat\unistd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\binarytotext.c" />
+    <ClCompile Include="..\src\decompress.c">
+    </ClCompile>
+    <ClCompile Include="..\src\ignore.c">
+    </ClCompile>
+    <ClCompile Include="..\src\lang.c">
+    </ClCompile>
+    <ClCompile Include="..\src\log.c">
+    </ClCompile>
+    <ClCompile Include="..\src\main.c">
+    </ClCompile>
+    <ClCompile Include="..\src\options.c">
+    </ClCompile>
+    <ClCompile Include="..\src\print.c">
+    </ClCompile>
+    <ClCompile Include="..\src\print_w32.c">
+    </ClCompile>
+    <ClCompile Include="..\src\scandir.c">
+    </ClCompile>
+    <ClCompile Include="..\src\search.c">
+    </ClCompile>
+    <ClCompile Include="..\src\util.c">
+    </ClCompile>
+    <ClCompile Include="..\wincompat\dirent.c">
+    </ClCompile>
+    <ClCompile Include="..\wincompat\getopt.c">
+    </ClCompile>
+    <ClCompile Include="..\wincompat\unistd.c">
+    </ClCompile>
+    <ClCompile Include="..\wincompat\kjk_crash_handler.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
